@@ -8,6 +8,33 @@ void main() => runApp(
             title:Text('Ask Me Anything'),
             backgroundColor:Colors.black,
           ),
+          body:BallPage(),
         ),
       ),
     );
+
+class BallPage extends StatefulWidget {
+  @override
+  _BallPageState createState() => _BallPageState();
+}
+
+class _BallPageState extends State<BallPage> {
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Row(
+        children:<Widget>[
+          Expanded(
+            child: FlatButton(
+              onPressed:(){
+                print('pressed');
+              } , 
+              child: Image.asset('images/ball1.png'),)
+          
+            
+          )
+        ]
+      ),
+    );
+  }
+}
